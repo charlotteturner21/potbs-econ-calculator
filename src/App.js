@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import {Button, Select} from "@mui/material";
+import RecipeSelector from "./components/RecipeSelector";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         >
           Learn React
         </a>
+        <Button variant="contained">TEST BUTTON</Button>
+          <RecipeSelector />
       </header>
     </div>
   );
