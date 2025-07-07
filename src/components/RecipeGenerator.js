@@ -19,29 +19,14 @@ import {
     Add as AddIcon,
     Remove as RemoveIcon,
     Download as DownloadIcon,
-    Save as SaveIcon,
     Preview as PreviewIcon
 } from '@mui/icons-material';
 import buildings from '../data/buildings';
 import recipes from '../data/recipes';
 
-function RecipeGenerator() {
-    const [recipe, setRecipe] = useState({
-        products: [{ name: '', quantity: 1 }],
-        ingredients: [],
-        buildings: [],
-        cost: {
-            labour: {
-                hours: 0,
-                minutes: 0
-            },
-            gold: 0
-        }
-    });
-    
-    const [previewMode, setPreviewMode] = useState(false);
-    const [generatedContent, setGeneratedContent] = useState('');
-    const [fileName, setFileName] = useState('');
+function RecipeGenerator({ generatorState, setGeneratorState }) {
+    // Extract state values from props
+    const { recipe, previewMode, generatedContent, fileName } = generatorState;
 
     // Extract available ingredient names from existing recipes
     const availableIngredients = React.useMemo(() => {
@@ -78,35 +63,53 @@ function RecipeGenerator() {
     }, []);
 
     const handleRecipeChange = (field, value) => {
-        setRecipe(prev => ({ ...prev, [field]: value }));
+        setGeneratorState(prev => ({
+            ...prev,
+            recipe: { ...prev.recipe, [field]: value }
+        }));
         if (field === 'products' && value.length > 0) {
             // Use first product name for filename
-            setFileName(value[0].name.replace(/[^a-zA-Z0-9]/g, ''));
+            setGeneratorState(prev => ({
+                ...prev,
+                fileName: value[0].name.replace(/[^a-zA-Z0-9]/g, '')
+            }));
         }
     };
 
     const handleProductChange = (index, field, value) => {
         const newProducts = [...recipe.products];
         newProducts[index] = { ...newProducts[index], [field]: value };
-        setRecipe(prev => ({ ...prev, products: newProducts }));
+        setGeneratorState(prev => ({
+            ...prev,
+            recipe: { ...prev.recipe, products: newProducts }
+        }));
         
         if (field === 'name' && index === 0) {
-            setFileName(value.replace(/[^a-zA-Z0-9]/g, ''));
+            setGeneratorState(prev => ({
+                ...prev,
+                fileName: value.replace(/[^a-zA-Z0-9]/g, '')
+            }));
         }
     };
 
     const addProduct = () => {
-        setRecipe(prev => ({
+        setGeneratorState(prev => ({
             ...prev,
-            products: [...prev.products, { name: '', quantity: 1 }]
+            recipe: {
+                ...prev.recipe,
+                products: [...prev.recipe.products, { name: '', quantity: 1 }]
+            }
         }));
     };
 
     const removeProduct = (index) => {
         if (recipe.products.length > 1) {
-            setRecipe(prev => ({
+            setGeneratorState(prev => ({
                 ...prev,
-                products: prev.products.filter((_, i) => i !== index)
+                recipe: {
+                    ...prev.recipe,
+                    products: prev.recipe.products.filter((_, i) => i !== index)
+                }
             }));
         }
     };
@@ -114,25 +117,37 @@ function RecipeGenerator() {
     const handleIngredientChange = (index, field, value) => {
         const newIngredients = [...recipe.ingredients];
         newIngredients[index] = { ...newIngredients[index], [field]: value };
-        setRecipe(prev => ({ ...prev, ingredients: newIngredients }));
+        setGeneratorState(prev => ({
+            ...prev,
+            recipe: { ...prev.recipe, ingredients: newIngredients }
+        }));
     };
 
     const addIngredient = () => {
-        setRecipe(prev => ({
+        setGeneratorState(prev => ({
             ...prev,
-            ingredients: [...prev.ingredients, { name: '', quantity: 1 }]
+            recipe: {
+                ...prev.recipe,
+                ingredients: [...prev.recipe.ingredients, { name: '', quantity: 1 }]
+            }
         }));
     };
 
     const removeIngredient = (index) => {
-        setRecipe(prev => ({
+        setGeneratorState(prev => ({
             ...prev,
-            ingredients: prev.ingredients.filter((_, i) => i !== index)
+            recipe: {
+                ...prev.recipe,
+                ingredients: prev.recipe.ingredients.filter((_, i) => i !== index)
+            }
         }));
     };
 
     const handleBuildingChange = (event, newValue) => {
-        setRecipe(prev => ({ ...prev, buildings: newValue }));
+        setGeneratorState(prev => ({
+            ...prev,
+            recipe: { ...prev.recipe, buildings: newValue }
+        }));
     };
 
     const generateRecipeFile = () => {
@@ -151,8 +166,11 @@ function RecipeGenerator() {
         
         const content = JSON.stringify(recipeData, null, 4);
         
-        setGeneratedContent(content);
-        setPreviewMode(true);
+        setGeneratorState(prev => ({
+            ...prev,
+            generatedContent: content,
+            previewMode: true
+        }));
     };
 
     const downloadFile = () => {
@@ -167,36 +185,30 @@ function RecipeGenerator() {
         URL.revokeObjectURL(url);
     };
 
-    const saveToProject = async () => {
-        try {
-            // This would typically require a backend endpoint
-            // For now, we'll just show the download option
-            Alert('Use the download button to save the file to your project\'s src/recipes/ directory');
-        } catch (error) {
-            console.error('Error saving file:', error);
-        }
-    };
+
 
     const resetForm = () => {
-        setRecipe({
-            products: [{ name: '', quantity: 1 }],
-            ingredients: [],
-            buildings: [],
-            cost: {
-                labour: {
-                    hours: 0,
-                    minutes: 0
-                },
-                gold: 0
-            }
+        setGeneratorState({
+            recipe: {
+                products: [{ name: '', quantity: 1 }],
+                ingredients: [],
+                buildings: [],
+                cost: {
+                    labour: {
+                        hours: 0,
+                        minutes: 0
+                    },
+                    gold: 0
+                }
+            },
+            previewMode: false,
+            generatedContent: '',
+            fileName: ''
         });
-        setPreviewMode(false);
-        setGeneratedContent('');
-        setFileName('');
     };
 
     return (
-        <Box sx={{ maxWidth: 1200, mx: 'auto', p: 3 }}>
+        <Box sx={{ maxWidth: 1200, p: 3 }}>
             <Typography variant="h4" gutterBottom>
                 Recipe Generator
             </Typography>
@@ -205,10 +217,10 @@ function RecipeGenerator() {
             </Typography>
 
             {/* Form Section - Always Full Width */}
-            <Stack spacing={3}>
+            <Stack spacing={3} sx={{ alignItems: 'stretch' }}>
                         {/* Products Section - Own Card */}
                         <Card>
-                            <CardContent>
+                            <CardContent sx={{ textAlign: 'left' }}>
                                 <Typography variant="h6" gutterBottom>
                                     Products
                                 </Typography>
@@ -268,7 +280,7 @@ function RecipeGenerator() {
 
                         {/* Production Cost Section - Own Card */}
                         <Card>
-                            <CardContent>
+                            <CardContent sx={{ textAlign: 'left' }}>
                                 <Typography variant="h6" gutterBottom>
                                     Production Cost
                                 </Typography>
@@ -276,18 +288,21 @@ function RecipeGenerator() {
                                     Time and gold required to produce this recipe
                                 </Typography>
                                 
-                                <Stack direction="row" spacing={2}>
+                                <Stack direction="row" spacing={2} sx={{ justifyContent: 'flex-start' }}>
                                     <TextField
                                         label="Labour Hours"
                                         type="number"
                                         value={recipe.cost.labour.hours}
-                                        onChange={(e) => setRecipe(prev => ({
+                                        onChange={(e) => setGeneratorState(prev => ({
                                             ...prev,
-                                            cost: {
-                                                ...prev.cost,
-                                                labour: {
-                                                    ...prev.cost.labour,
-                                                    hours: parseInt(e.target.value) || 0
+                                            recipe: {
+                                                ...prev.recipe,
+                                                cost: {
+                                                    ...prev.recipe.cost,
+                                                    labour: {
+                                                        ...prev.recipe.cost.labour,
+                                                        hours: parseInt(e.target.value) || 0
+                                                    }
                                                 }
                                             }
                                         }))}
@@ -300,13 +315,16 @@ function RecipeGenerator() {
                                         label="Labour Minutes"
                                         type="number"
                                         value={recipe.cost.labour.minutes}
-                                        onChange={(e) => setRecipe(prev => ({
+                                        onChange={(e) => setGeneratorState(prev => ({
                                             ...prev,
-                                            cost: {
-                                                ...prev.cost,
-                                                labour: {
-                                                    ...prev.cost.labour,
-                                                    minutes: Math.min(59, parseInt(e.target.value) || 0)
+                                            recipe: {
+                                                ...prev.recipe,
+                                                cost: {
+                                                    ...prev.recipe.cost,
+                                                    labour: {
+                                                        ...prev.recipe.cost.labour,
+                                                        minutes: Math.min(59, parseInt(e.target.value) || 0)
+                                                    }
                                                 }
                                             }
                                         }))}
@@ -319,11 +337,14 @@ function RecipeGenerator() {
                                         label="Gold Cost *"
                                         type="number"
                                         value={recipe.cost.gold}
-                                        onChange={(e) => setRecipe(prev => ({
+                                        onChange={(e) => setGeneratorState(prev => ({
                                             ...prev,
-                                            cost: {
-                                                ...prev.cost,
-                                                gold: parseInt(e.target.value) || 0
+                                            recipe: {
+                                                ...prev.recipe,
+                                                cost: {
+                                                    ...prev.recipe.cost,
+                                                    gold: parseInt(e.target.value) || 0
+                                                }
                                             }
                                         }))}
                                         inputProps={{ min: 1 }}
@@ -338,7 +359,7 @@ function RecipeGenerator() {
                         
                         {/* Ingredients Section - Own Card */}
                         <Card>
-                            <CardContent>
+                            <CardContent sx={{ textAlign: 'left' }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
                                     <Typography variant="h6">
                                         Ingredients
@@ -432,7 +453,7 @@ function RecipeGenerator() {
                                         ))}
                                     </Stack>
                                 ) : (
-                                    <Paper sx={{ p: 2, textAlign: 'center', bgcolor: 'success.light', color: 'success.contrastText' }}>
+                                    <Paper sx={{ p: 2, textAlign: 'left', bgcolor: 'success.light', color: 'success.contrastText' }}>
                                         <Typography variant="body2">
                                             No ingredients required - Base recipe
                                         </Typography>
@@ -446,7 +467,7 @@ function RecipeGenerator() {
 
                         {/* Buildings Section - Own Card */}
                         <Card>
-                            <CardContent>
+                            <CardContent sx={{ textAlign: 'left' }}>
                                 <Typography variant="h6" gutterBottom>
                                     Buildings *
                                 </Typography>
@@ -487,12 +508,12 @@ function RecipeGenerator() {
 
                         {/* Actions Section - Own Card */}
                         <Card>
-                            <CardContent>
+                            <CardContent sx={{ textAlign: 'left' }}>
                                 <Typography variant="h6" gutterBottom>
                                     Generate Recipe
                                 </Typography>
                                 
-                                <Stack direction="row" spacing={2} flexWrap="wrap" sx={{ mb: 2 }}>
+                                <Stack direction="row" spacing={2} flexWrap="wrap" sx={{ mb: 2, justifyContent: 'flex-start' }}>
                                     <Button 
                                         variant="contained" 
                                         onClick={generateRecipeFile}
@@ -564,7 +585,7 @@ function RecipeGenerator() {
             {/* Preview Section - Full Width Below Form */}
             {previewMode && (
                 <Card sx={{ mt: 3 }}>
-                    <CardContent>
+                    <CardContent sx={{ textAlign: 'left' }}>
                         <Typography variant="h6" gutterBottom>
                             Generated Recipe File
                         </Typography>
@@ -593,7 +614,8 @@ function RecipeGenerator() {
                                         fontSize: '0.875rem',
                                         lineHeight: 1.5,
                                         margin: 0,
-                                        whiteSpace: 'pre-wrap'
+                                        whiteSpace: 'pre-wrap',
+                                        textAlign: 'left'
                                     }}
                                 >
                                     {generatedContent}
@@ -601,7 +623,7 @@ function RecipeGenerator() {
                             </Box>
                         </Paper>
 
-                        <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
+                        <Stack direction="row" spacing={2} sx={{ mt: 2, justifyContent: 'flex-start' }}>
                             <Button 
                                 variant="contained" 
                                 onClick={downloadFile}
@@ -610,20 +632,10 @@ function RecipeGenerator() {
                             >
                                 Download JSON File
                             </Button>
-                            <Button 
-                                variant="outlined" 
-                                onClick={saveToProject}
-                                startIcon={<SaveIcon />}
-                                fullWidth
-                                disabled
-                                title="Feature coming soon"
-                            >
-                                Save to Project
-                            </Button>
                         </Stack>
                         
                         <Typography variant="caption" color="text.secondary" sx={{ mt: 1, display: 'block' }}>
-                            💡 Download the file and place it in your project's src/recipes/ directory, then rebuild your recipes using the build script.
+                            💡 Download the file and open a Pull Request to the <a href="https://github.com/charlotteturner21/potbs-econ-calculator" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>GitHub repository</a> to contribute new recipes to the project.
                         </Typography>
                     </CardContent>
                 </Card>

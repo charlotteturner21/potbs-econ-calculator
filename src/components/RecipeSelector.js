@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import {
     MenuItem,
     Select,
@@ -40,16 +40,22 @@ import {
 } from '@mui/icons-material';
 import recipes from "../data/recipes";
 
-function RecipeSelector() {
-    const [selectedRecipe, setSelectedRecipe] = useState('');
-    const [tabValue, setTabValue] = useState(0);
+function RecipeSelector({ selectorState, setSelectorState }) {
+    // Extract state values from props
+    const { selectedRecipe, tabValue } = selectorState;
     
     const handleRecipeChange = (event, newValue) => {
-        setSelectedRecipe(newValue || '');
+        setSelectorState(prev => ({
+            ...prev,
+            selectedRecipe: newValue || ''
+        }));
     };
 
     const handleTabChange = (event, newValue) => {
-        setTabValue(newValue);
+        setSelectorState(prev => ({
+            ...prev,
+            tabValue: newValue
+        }));
     };
 
     // Helper function to get products array from recipe data (handles both old and new format)
@@ -356,7 +362,7 @@ function RecipeSelector() {
     return (
         <Box sx={{ maxWidth: 1400, mx: 'auto', p: 3 }}>
             {/* Header */}
-            <Box sx={{ mb: 4, textAlign: 'center' }}>
+            <Box sx={{ mb: 4, textAlign: 'left' }}>
                 <Typography variant="h4" gutterBottom sx={{ fontWeight: 600 }}>
                     Recipe Calculator
                 </Typography>
@@ -813,7 +819,7 @@ function RecipeSelector() {
                 </Box>
             ) : (
                 <Card>
-                    <CardContent sx={{ textAlign: 'center', py: 6 }}>
+                    <CardContent sx={{ textAlign: 'left', py: 6 }}>
                         <Typography variant="h6" color="text.secondary" gutterBottom>
                             Select a recipe to get started
                         </Typography>

@@ -46,6 +46,31 @@ function a11yProps(index) {
 function App() {
   const [tabValue, setTabValue] = useState(0);
 
+  // Persistent state for Recipe Generator
+  const [generatorState, setGeneratorState] = useState({
+    recipe: {
+      products: [{ name: '', quantity: 1 }],
+      ingredients: [],
+      buildings: [],
+      cost: {
+        labour: {
+          hours: 0,
+          minutes: 0
+        },
+        gold: 0
+      }
+    },
+    previewMode: false,
+    generatedContent: '',
+    fileName: ''
+  });
+
+  // Persistent state for Recipe Selector
+  const [selectorState, setSelectorState] = useState({
+    selectedRecipe: '',
+    tabValue: 0
+  });
+
   const handleTabChange = (event, newValue) => {
     setTabValue(newValue);
   };
@@ -71,11 +96,17 @@ function App() {
         </Paper>
         
         <TabPanel value={tabValue} index={0}>
-          <RecipeSelector />
+          <RecipeSelector 
+            selectorState={selectorState}
+            setSelectorState={setSelectorState}
+          />
         </TabPanel>
         
         <TabPanel value={tabValue} index={1}>
-          <RecipeGenerator />
+          <RecipeGenerator 
+            generatorState={generatorState}
+            setGeneratorState={setGeneratorState}
+          />
         </TabPanel>
       </Container>
       
