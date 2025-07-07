@@ -44,20 +44,6 @@ function RecipeSelector({ selectorState, setSelectorState }) {
     // Extract state values from props
     const { selectedRecipe, tabValue } = selectorState;
     
-    const handleRecipeChange = (event, newValue) => {
-        setSelectorState(prev => ({
-            ...prev,
-            selectedRecipe: newValue || ''
-        }));
-    };
-
-    const handleTabChange = (event, newValue) => {
-        setSelectorState(prev => ({
-            ...prev,
-            tabValue: newValue
-        }));
-    };
-
     // Helper function to get products array from recipe data (handles both old and new format)
     const getRecipeProducts = (recipeData) => {
         // Safety check: return empty array if recipeData is undefined/null
@@ -74,6 +60,22 @@ function RecipeSelector({ selectorState, setSelectorState }) {
             return [recipeData.product];
         }
         return [];
+    };
+    
+
+    
+    const handleRecipeChange = (event, newValue) => {
+        setSelectorState(prev => ({
+            ...prev,
+            selectedRecipe: newValue || ''
+        }));
+    };
+
+    const handleTabChange = (event, newValue) => {
+        setSelectorState(prev => ({
+            ...prev,
+            tabValue: newValue
+        }));
     };
 
     // Function to find recipes that produce a given ingredient
@@ -374,30 +376,15 @@ function RecipeSelector({ selectorState, setSelectorState }) {
             {/* Recipe Search */}
             <Card sx={{ mb: 3 }}>
                 <CardContent>
-                    <Autocomplete
-                        options={Object.keys(recipes).sort((a, b) => {
-                            const recipeDataA = recipes[a];
-                            const recipeDataB = recipes[b];
-                            const productsA = getRecipeProducts(recipeDataA);
-                            const productsB = getRecipeProducts(recipeDataB);
-                            const nameA = productsA.length > 0 ? productsA[0]?.name || a : a;
-                            const nameB = productsB.length > 0 ? productsB[0]?.name || b : b;
-                            return nameA.localeCompare(nameB);
-                        })}
+                                        <Autocomplete
+                        options={Object.keys(recipes).sort()}
                         value={selectedRecipe}
                         onChange={handleRecipeChange}
-                        getOptionLabel={(option) => {
-                            const recipeData = recipes[option];
-                            if (!recipeData) return option;
-                            const products = getRecipeProducts(recipeData);
-                            const label = products.length > 0 ? products.map(p => p.name).join(' + ') : option;
-                            return label.length > 50 ? label.substring(0, 50) + '...' : label;
-                        }}
                         renderInput={(params) => (
                             <TextField
                                 {...params}
                                 label="Search for a recipe..."
-                                placeholder="Type product name (e.g., Granite, Cannon, Sails)"
+                                placeholder="Type recipe name (e.g., Oak, Cannon, Iron)"
                                 variant="outlined"
                                 size="large"
                                 fullWidth
@@ -407,38 +394,27 @@ function RecipeSelector({ selectorState, setSelectorState }) {
                             const recipeData = recipes[option];
                             if (!recipeData) return <li {...props}>{option}</li>;
                             const products = getRecipeProducts(recipeData);
+                            const recipeName = option.replace(/^Recipe_/, '').replace(/_/g, ' ');
                             
                             return (
                                 <li {...props}>
                                     <Box sx={{ py: 1 }}>
                                         <Typography variant="body1" fontWeight="medium">
-                                            {products.length > 0 ? products.map(p => p.name).join(' + ') : option}
+                                            {recipeName}
                                         </Typography>
                                         {products.length > 0 && (
                                             <Typography variant="caption" color="text.secondary">
-                                                {products.map(p => `${p.quantity}x ${p.name}`).join(', ')}
+                                                Produces: {products.map(p => `${p.quantity}x ${p.name}`).join(', ')}
                                             </Typography>
                                         )}
                                     </Box>
                                 </li>
                             );
                         }}
-                        filterOptions={(options, { inputValue }) => {
-                            const searchTerm = inputValue.toLowerCase();
-                            return options.filter(option => {
-                                const recipeData = recipes[option];
-                                if (!recipeData) return option.toLowerCase().includes(searchTerm);
-                                const products = getRecipeProducts(recipeData);
-                                
-                                return option.toLowerCase().includes(searchTerm) ||
-                                      products.some(product => 
-                                          product?.name?.toLowerCase().includes(searchTerm)
-                                      );
-                            });
-                        }}
                         noOptionsText="No recipes found"
                         clearOnEscape
                         size="medium"
+                        freeSolo={false}
                     />
                 </CardContent>
             </Card>

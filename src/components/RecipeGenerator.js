@@ -22,45 +22,12 @@ import {
     Preview as PreviewIcon
 } from '@mui/icons-material';
 import buildings from '../data/buildings';
-import recipes from '../data/recipes';
 
 function RecipeGenerator({ generatorState, setGeneratorState }) {
     // Extract state values from props
     const { recipe, previewMode, generatedContent, fileName } = generatorState;
 
-    // Extract available ingredient names from existing recipes
-    const availableIngredients = React.useMemo(() => {
-        const ingredientNames = new Set();
-        
-        // Add all product names from existing recipes (handle both old and new format)
-        Object.values(recipes).forEach(recipeData => {
-            // New format: products array
-            if (recipeData.products && Array.isArray(recipeData.products)) {
-                recipeData.products.forEach(product => {
-                    if (product.name) {
-                        ingredientNames.add(product.name);
-                    }
-                });
-            }
-            // Old format: single product object
-            else if (recipeData.product && recipeData.product.name) {
-                ingredientNames.add(recipeData.product.name);
-            }
-        });
-        
-        // Add all ingredient names from existing recipes
-        Object.values(recipes).forEach(recipeData => {
-            if (recipeData.ingredients) {
-                recipeData.ingredients.forEach(ingredient => {
-                    if (ingredient.name) {
-                        ingredientNames.add(ingredient.name);
-                    }
-                });
-            }
-        });
-        
-        return Array.from(ingredientNames).sort();
-    }, []);
+
 
     const handleRecipeChange = (field, value) => {
         setGeneratorState(prev => ({
@@ -231,23 +198,15 @@ function RecipeGenerator({ generatorState, setGeneratorState }) {
                                 <Stack spacing={2}>
                                     {recipe.products.map((product, index) => (
                                         <Stack key={index} direction="row" spacing={2} alignItems="center">
-                                            <Autocomplete
+                                            <TextField
+                                                label={`Product ${index + 1} Name`}
+                                                variant="outlined"
                                                 value={product.name}
-                                                onChange={(event, newValue) => handleProductChange(index, 'name', newValue || '')}
-                                                inputValue={product.name}
-                                                onInputChange={(event, newInputValue) => handleProductChange(index, 'name', newInputValue)}
-                                                options={availableIngredients}
-                                                freeSolo
+                                                onChange={(e) => handleProductChange(index, 'name', e.target.value)}
+                                                required
+                                                error={!product.name.trim()}
+                                                placeholder="Enter new product name..."
                                                 sx={{ flexGrow: 1 }}
-                                                renderInput={(params) => (
-                                                    <TextField
-                                                        {...params}
-                                                        label={`Product ${index + 1} Name`}
-                                                        variant="outlined"
-                                                        required
-                                                        error={!product.name.trim()}
-                                                    />
-                                                )}
                                             />
                                             <TextField
                                                 label="Quantity"
@@ -376,63 +335,12 @@ function RecipeGenerator({ generatorState, setGeneratorState }) {
                                     <Stack spacing={2}>
                                         {recipe.ingredients.map((ingredient, index) => (
                                             <Box key={index} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-                                                <Autocomplete
+                                                <TextField
+                                                    label="Ingredient Name"
                                                     value={ingredient.name}
-                                                    onChange={(event, newValue) => handleIngredientChange(index, 'name', newValue || '')}
-                                                    inputValue={ingredient.name}
-                                                    onInputChange={(event, newInputValue) => handleIngredientChange(index, 'name', newInputValue)}
-                                                    options={availableIngredients}
-                                                    freeSolo
+                                                    onChange={(e) => handleIngredientChange(index, 'name', e.target.value)}
+                                                    placeholder="Enter ingredient name..."
                                                     sx={{ flex: 1 }}
-                                                    renderInput={(params) => {
-                                                        const producingRecipe = Object.entries(recipes).find(([name, data]) => 
-                                                            data.product && data.product.name === ingredient.name
-                                                        );
-                                                        
-                                                        let helperText = "Type or select ingredient...";
-                                                        if (ingredient.name) {
-                                                            if (producingRecipe) {
-                                                                helperText = `✓ Can be crafted via "${producingRecipe[0]}" recipe`;
-                                                            } else if (availableIngredients.includes(ingredient.name)) {
-                                                                helperText = "⚠️ Used in recipes but no production recipe found";
-                                                            } else {
-                                                                helperText = "Custom ingredient - manual input required";
-                                                            }
-                                                        }
-                                                        
-                                                        return (
-                                                            <TextField
-                                                                {...params}
-                                                                label="Ingredient Name"
-                                                                placeholder="Type or select ingredient..."
-                                                                helperText={helperText}
-                                                            />
-                                                        );
-                                                    }}
-                                                    renderOption={(props, option) => {
-                                                        // Find recipe that produces this ingredient
-                                                        const producingRecipe = Object.entries(recipes).find(([name, data]) => 
-                                                            data.product && data.product.name === option
-                                                        );
-                                                        
-                                                        return (
-                                                            <li {...props}>
-                                                                <Box>
-                                                                    <Typography variant="body2">{option}</Typography>
-                                                                    {producingRecipe && (
-                                                                        <Typography variant="caption" color="text.secondary">
-                                                                            From recipe: {producingRecipe[0]}
-                                                                        </Typography>
-                                                                    )}
-                                                                    {!producingRecipe && (
-                                                                        <Typography variant="caption" color="warning.main">
-                                                                            No recipe found - manual input required
-                                                                        </Typography>
-                                                                    )}
-                                                                </Box>
-                                                            </li>
-                                                        );
-                                                    }}
                                                 />
                                                 <TextField
                                                     label="Qty"
