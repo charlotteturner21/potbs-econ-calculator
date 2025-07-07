@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "Spyglass",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Ingot, Silver",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 400
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "product": {
+    "name": "'Lexington' Mastercraft Brig",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "'Lexington' Brig",
+      "quantity": 1
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 5
+    },
+    {
+      "name": "Cannon, Small",
+      "quantity": 4
+    },
+    {
+      "name": "Cheese, Fine",
+      "quantity": 1
+    },
+    {
+      "name": "Ingot, Gold",
+      "quantity": 1
+    },
+    {
+      "name": "Ingot, Silver",
+      "quantity": 1
+    },
+    {
+      "name": "Planks, Teak",
+      "quantity": 5
+    },
+    {
+      "name": "Ship Fittings, Brass",
+      "quantity": 5
+    },
+    {
+      "name": "Wine, Fine",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 2,
+      "minutes": 0
+    },
+    "gold": 1200
+  }
+}

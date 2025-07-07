@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Extra Powder Magazine 2",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 24
+    },
+    {
+      "name": "Cotton, Spun",
+      "quantity": 16
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 1200
+  }
+}

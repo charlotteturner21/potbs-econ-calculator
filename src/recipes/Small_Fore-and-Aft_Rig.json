@@ -1,0 +1,34 @@
+{
+  "product": {
+    "name": "Small Fore-and-Aft Rig",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Mast Section",
+      "quantity": 4
+    },
+    {
+      "name": "Rigging",
+      "quantity": 2
+    },
+    {
+      "name": "Sailcloth",
+      "quantity": 3
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 3,
+      "minutes": 0
+    },
+    "gold": 120
+  }
+}

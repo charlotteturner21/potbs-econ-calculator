@@ -1,0 +1,38 @@
+{
+  "product": {
+    "name": "Huge Square Rig",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 10
+    },
+    {
+      "name": "Mast Section",
+      "quantity": 28
+    },
+    {
+      "name": "Rigging",
+      "quantity": 25
+    },
+    {
+      "name": "Sailcloth",
+      "quantity": 22
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 14
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 12,
+      "minutes": 0
+    },
+    "gold": 480
+  }
+}

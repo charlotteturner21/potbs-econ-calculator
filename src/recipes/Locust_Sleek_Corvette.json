@@ -1,0 +1,34 @@
+{
+  "product": {
+    "name": "'Locust' Sleek Corvette",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "'Locust' Corvette",
+      "quantity": 1
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 5
+    },
+    {
+      "name": "Planks, Teak",
+      "quantity": 15
+    },
+    {
+      "name": "Ship Fittings, Brass",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

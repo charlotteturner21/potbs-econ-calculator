@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Kedge Anchors, Heavy",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Hemp Rope",
+      "quantity": 2
+    },
+    {
+      "name": "Ingot, Iron",
+      "quantity": 8
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "product": {
+    "name": "'Raa' Heavy Frigate (Captured)",
+    "quantity": 3
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 8
+    },
+    {
+      "name": "Blocks, Oak",
+      "quantity": 4
+    },
+    {
+      "name": "Hemp Canvas",
+      "quantity": 4
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 4
+    },
+    {
+      "name": "Hulk, Superior",
+      "quantity": 1
+    },
+    {
+      "name": "Mast Section",
+      "quantity": 5
+    },
+    {
+      "name": "Nails",
+      "quantity": 2
+    },
+    {
+      "name": "Planks, Oak",
+      "quantity": 20
+    },
+    {
+      "name": "Rum",
+      "quantity": 8
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 3
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 3
+    }
+  ],
+  "buildings": [
+    "Careening Camp"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 36,
+      "minutes": 0
+    },
+    "gold": 0
+  }
+}

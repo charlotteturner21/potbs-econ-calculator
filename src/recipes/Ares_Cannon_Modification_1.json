@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Ares' Cannon Modification 1",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 4
+    },
+    {
+      "name": "Ingot, Brass",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

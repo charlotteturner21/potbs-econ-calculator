@@ -1,0 +1,54 @@
+{
+  "product": {
+    "name": "'Cerberus' Frigate",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 12
+    },
+    {
+      "name": "Cannon, Medium",
+      "quantity": 26
+    },
+    {
+      "name": "Cannon, Swivel Gun",
+      "quantity": 4
+    },
+    {
+      "name": "Granite",
+      "quantity": 16
+    },
+    {
+      "name": "Large Hull",
+      "quantity": 1
+    },
+    {
+      "name": "Large Square Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 10
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 5
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 10
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 48,
+      "minutes": 43
+    },
+    "gold": 22400
+  }
+}

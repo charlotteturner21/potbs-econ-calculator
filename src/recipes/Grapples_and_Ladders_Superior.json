@@ -1,0 +1,31 @@
+{
+  "product": {
+    "name": "Grapples and Ladders, Superior",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Hemp Rope",
+      "quantity": 4
+    },
+    {
+      "name": "Ingot, Iron",
+      "quantity": 6
+    },
+    {
+      "name": "Logs, Teak",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Advanced Lumber Mill",
+    "Lumber Mill"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 1000
+  }
+}

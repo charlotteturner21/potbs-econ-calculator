@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Hardened Masts 4",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Logs, Fir",
+      "quantity": 20
+    },
+    {
+      "name": "Nails",
+      "quantity": 12
+    }
+  ],
+  "buildings": [
+    "Advanced Lumber Mill",
+    "Lumber Mill"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 2000
+  }
+}

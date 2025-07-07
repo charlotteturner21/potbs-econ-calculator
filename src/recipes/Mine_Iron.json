@@ -1,0 +1,17 @@
+{
+  "product": {
+    "name": "Ore, Iron",
+    "quantity": 10
+  },
+  "ingredients": [],
+  "buildings": [
+    "Advanced Mine (Iron)"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 240
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "product": {
+    "name": "Heavy Cannon Modification 3",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 25
+    },
+    {
+      "name": "Ingot, Brass",
+      "quantity": 12
+    },
+    {
+      "name": "Ingot, Iron",
+      "quantity": 37
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 2500
+  }
+}

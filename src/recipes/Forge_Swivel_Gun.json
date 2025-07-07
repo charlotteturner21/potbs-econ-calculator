@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "Cannon, Swivel Gun",
+    "quantity": 8
+  },
+  "ingredients": [
+    {
+      "name": "Ingot, Iron",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 2,
+      "minutes": 0
+    },
+    "gold": 120
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "product": {
+    "name": "'Limburg' Trader's Flute",
+    "quantity": 4
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 2
+    },
+    {
+      "name": "Cannon, Small",
+      "quantity": 12
+    },
+    {
+      "name": "Cannon, Swivel Gun",
+      "quantity": 6
+    },
+    {
+      "name": "Granite",
+      "quantity": 6
+    },
+    {
+      "name": "Medium Hull",
+      "quantity": 1
+    },
+    {
+      "name": "Medium Square Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 5
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 2
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 12,
+      "minutes": 0
+    },
+    "gold": 1600
+  }
+}

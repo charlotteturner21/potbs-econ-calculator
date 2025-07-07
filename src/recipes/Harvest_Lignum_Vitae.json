@@ -1,0 +1,14 @@
+{
+  "product": null,
+  "ingredients": [],
+  "buildings": [
+    "Advanced Logging Camp (Ironwood)"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 1400
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "product": {
+    "name": "'Curieuse' Heavy Snow",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "'Curieuse' Snow",
+      "quantity": 1
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 2
+    },
+    {
+      "name": "Planks, Teak",
+      "quantity": 8
+    },
+    {
+      "name": "Ship Fittings, Brass",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

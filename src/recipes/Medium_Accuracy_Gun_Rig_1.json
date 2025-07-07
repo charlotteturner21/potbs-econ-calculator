@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "Medium Accuracy Gun Rig 1",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Blocks, Oak",
+      "quantity": 3
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 200
+  }
+}

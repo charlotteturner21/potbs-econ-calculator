@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Small Raider's Guns 3",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 3
+    },
+    {
+      "name": "Ingot, Iron",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 600
+  }
+}

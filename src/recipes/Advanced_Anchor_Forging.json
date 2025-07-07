@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "Anchor",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Ingot, Iron",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 45
+    },
+    "gold": 120
+  }
+}

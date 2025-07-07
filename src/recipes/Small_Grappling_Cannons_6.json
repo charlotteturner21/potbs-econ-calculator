@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Small Grappling Cannons 6",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Hemp Rope",
+      "quantity": 6
+    },
+    {
+      "name": "Ingot, Brass",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 2400
+  }
+}

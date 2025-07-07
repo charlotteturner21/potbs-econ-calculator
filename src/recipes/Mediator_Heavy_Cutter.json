@@ -1,0 +1,34 @@
+{
+  "product": {
+    "name": "'Mediator' Heavy Cutter",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "'Mediator' Cutter",
+      "quantity": 1
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 1
+    },
+    {
+      "name": "Planks, Teak",
+      "quantity": 8
+    },
+    {
+      "name": "Ship Fittings, Brass",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

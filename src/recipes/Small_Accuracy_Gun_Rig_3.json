@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Small Accuracy Gun Rig 3",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Oak Blocks",
+      "quantity": 2
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 600
+  }
+}

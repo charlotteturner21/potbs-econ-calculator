@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Mast Brace, Rough",
+    "quantity": 10
+  },
+  "ingredients": [
+    {
+      "name": "Logs, Fir",
+      "quantity": 1
+    },
+    {
+      "name": "Nails",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Advanced Lumber Mill",
+    "Lumber Mill"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 100
+  }
+}

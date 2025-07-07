@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Mast Brace, First-Rate",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Logs, Fir",
+      "quantity": 38
+    },
+    {
+      "name": "Ship Fittings, Brass",
+      "quantity": 5
+    }
+  ],
+  "buildings": [
+    "Advanced Lumber Mill",
+    "Lumber Mill"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 18,
+      "minutes": 0
+    },
+    "gold": 5000
+  }
+}

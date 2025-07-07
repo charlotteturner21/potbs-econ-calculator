@@ -1,0 +1,35 @@
+{
+  "product": {
+    "name": "Colossal Perfected Cannons 2",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 16
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 8
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 16
+    },
+    {
+      "name": "Ingot, Brass",
+      "quantity": 8
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 600
+  }
+}

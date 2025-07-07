@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "Structural Brace, Inferior",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Logs, Oak",
+      "quantity": 50
+    }
+  ],
+  "buildings": [
+    "Advanced Lumber Mill",
+    "Lumber Mill"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 200
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "product": {
+    "name": "'Cerberus' Courier Frigate",
+    "quantity": 3
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 2
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 4
+    },
+    {
+      "name": "Cannon, Small",
+      "quantity": 20
+    },
+    {
+      "name": "Granite",
+      "quantity": 10
+    },
+    {
+      "name": "Large Hull",
+      "quantity": 1
+    },
+    {
+      "name": "Medium Square Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Planks, Teak",
+      "quantity": 6
+    },
+    {
+      "name": "Ship Fittings, Brass",
+      "quantity": 4
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 1
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 2
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 5
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 18,
+      "minutes": 0
+    },
+    "gold": 3600
+  }
+}

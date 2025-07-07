@@ -1,0 +1,62 @@
+{
+  "product": {
+    "name": "'Curieuse' Snow (Captured)",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 2
+    },
+    {
+      "name": "Blocks, Oak",
+      "quantity": 1
+    },
+    {
+      "name": "Hemp Canvas",
+      "quantity": 1
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 1
+    },
+    {
+      "name": "Hulk, Minor",
+      "quantity": 1
+    },
+    {
+      "name": "Mast Section",
+      "quantity": 2
+    },
+    {
+      "name": "Nails",
+      "quantity": 2
+    },
+    {
+      "name": "Planks, Oak",
+      "quantity": 2
+    },
+    {
+      "name": "Rum",
+      "quantity": 4
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 2
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Careening Camp"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 12,
+      "minutes": 0
+    },
+    "gold": 0
+  }
+}

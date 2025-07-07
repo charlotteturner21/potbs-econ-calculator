@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Huge Wadding 2",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Cotton, Spun",
+      "quantity": 10
+    },
+    {
+      "name": "Hemp Canvas",
+      "quantity": 20
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 600
+  }
+}

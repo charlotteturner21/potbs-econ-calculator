@@ -1,0 +1,31 @@
+{
+  "product": {
+    "name": "Artemis' Cannon Modification 3",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 6
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 6
+    },
+    {
+      "name": "Ingot, Brass",
+      "quantity": 12
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 1200
+  }
+}

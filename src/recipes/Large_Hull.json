@@ -1,0 +1,42 @@
+{
+  "product": {
+    "name": "Large Hull",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Frame Timber, Oak",
+      "quantity": 22
+    },
+    {
+      "name": "Keel Section",
+      "quantity": 2
+    },
+    {
+      "name": "Nails",
+      "quantity": 12
+    },
+    {
+      "name": "Planks, Oak",
+      "quantity": 140
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 14
+    },
+    {
+      "name": "Ship Stem",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 12,
+      "minutes": 0
+    },
+    "gold": 300
+  }
+}

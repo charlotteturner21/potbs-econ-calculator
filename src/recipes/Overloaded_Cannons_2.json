@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Overloaded Cannons 2",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 150
+    },
+    {
+      "name": "Ingot, Brass",
+      "quantity": 9
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 1200
+  }
+}

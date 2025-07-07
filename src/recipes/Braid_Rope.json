@@ -1,0 +1,26 @@
+{
+  "product": {
+    "name": "Hemp Rope",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Hemp",
+      "quantity": 5
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 30
+  }
+}

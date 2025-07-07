@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Cannon, Medium",
+    "quantity": 4
+  },
+  "ingredients": [
+    {
+      "name": "Ingot, Iron",
+      "quantity": 16
+    },
+    {
+      "name": "Logs, Common Wood",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 3,
+      "minutes": 0
+    },
+    "gold": 240
+  }
+}

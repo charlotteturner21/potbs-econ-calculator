@@ -1,0 +1,17 @@
+{
+  "product": {
+    "name": "Logs, Oak",
+    "quantity": 10
+  },
+  "ingredients": [],
+  "buildings": [
+    "Advanced Logging Camp (Oak)"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 72
+  }
+}

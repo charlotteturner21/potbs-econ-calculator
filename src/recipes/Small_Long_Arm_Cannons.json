@@ -1,0 +1,39 @@
+{
+  "product": {
+    "name": "Small Long Arm Cannon",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 2
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 4
+    },
+    {
+      "name": "Ingot, Gold",
+      "quantity": 1
+    },
+    {
+      "name": "Ingot, Silver",
+      "quantity": 1
+    },
+    {
+      "name": "Logs, Oak",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 600
+  }
+}

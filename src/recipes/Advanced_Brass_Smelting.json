@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Ingot, Brass",
+    "quantity": 2
+  },
+  "ingredients": [
+    {
+      "name": "Ore, Copper",
+      "quantity": 8
+    },
+    {
+      "name": "Ore, Zinc",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 30
+    },
+    "gold": 600
+  }
+}

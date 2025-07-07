@@ -1,0 +1,22 @@
+{
+  "product": {
+    "name": "Bandages",
+    "quantity": 10
+  },
+  "ingredients": [
+    {
+      "name": "Cotton, Spun",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 100
+  }
+}

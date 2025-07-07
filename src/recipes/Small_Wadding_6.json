@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Small Wadding 6",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Cotton, Spun",
+      "quantity": 3
+    },
+    {
+      "name": "Hemp Canvas",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 2400
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "product": {
+    "name": "Planks, Oak",
+    "quantity": 10
+  },
+  "ingredients": [
+    {
+      "name": "Logs, Oak",
+      "quantity": 10
+    }
+  ],
+  "buildings": [
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 45
+  }
+}

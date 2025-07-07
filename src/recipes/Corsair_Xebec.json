@@ -1,0 +1,54 @@
+{
+  "product": {
+    "name": "'Corsair' Xebec",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 6
+    },
+    {
+      "name": "Cannon, Small",
+      "quantity": 16
+    },
+    {
+      "name": "Cannon, Swivel Gun",
+      "quantity": 6
+    },
+    {
+      "name": "Granite",
+      "quantity": 12
+    },
+    {
+      "name": "Medium Fore-and-Aft Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Medium Hull",
+      "quantity": 1
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 5
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 3
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 7
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 36,
+      "minutes": 45
+    },
+    "gold": 3100
+  }
+}

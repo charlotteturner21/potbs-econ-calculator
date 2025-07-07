@@ -1,0 +1,62 @@
+{
+  "product": {
+    "name": "'Leviathan' Bark (Captured)",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 10
+    },
+    {
+      "name": "Blocks, Oak",
+      "quantity": 6
+    },
+    {
+      "name": "Hemp Canvas",
+      "quantity": 6
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 6
+    },
+    {
+      "name": "Hulk, Warship",
+      "quantity": 1
+    },
+    {
+      "name": "Mast Section",
+      "quantity": 5
+    },
+    {
+      "name": "Nails",
+      "quantity": 6
+    },
+    {
+      "name": "Planks, Oak",
+      "quantity": 40
+    },
+    {
+      "name": "Rum",
+      "quantity": 8
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 7
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 6
+    }
+  ],
+  "buildings": [
+    "Careening Camp"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 48,
+      "minutes": 0
+    },
+    "gold": 0
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "Ingot, Silver",
+    "quantity": 2
+  },
+  "ingredients": [
+    {
+      "name": "Ore, Silver",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 2,
+      "minutes": 0
+    },
+    "gold": 120
+  }
+}

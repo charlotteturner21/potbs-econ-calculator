@@ -1,0 +1,62 @@
+{
+  "product": {
+    "name": "'Stralsund' Frigate",
+    "quantity": 3
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 4
+    },
+    {
+      "name": "Cannon, Large",
+      "quantity": 2
+    },
+    {
+      "name": "Cannon, Small",
+      "quantity": 20
+    },
+    {
+      "name": "Cannon, Swivel Gun",
+      "quantity": 4
+    },
+    {
+      "name": "Cannon, Very Small",
+      "quantity": 8
+    },
+    {
+      "name": "Granite",
+      "quantity": 16
+    },
+    {
+      "name": "Large Hull",
+      "quantity": 1
+    },
+    {
+      "name": "Medium Square Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 5
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 4
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 8
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 18,
+      "minutes": 0
+    },
+    "gold": 2000
+  }
+}

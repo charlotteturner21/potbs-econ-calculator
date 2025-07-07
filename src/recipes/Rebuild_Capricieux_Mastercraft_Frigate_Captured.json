@@ -1,0 +1,62 @@
+{
+  "product": {
+    "name": "'Capriceux' Mastercraft Frigate (Captured)",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 8
+    },
+    {
+      "name": "Blocks, Oak",
+      "quantity": 8
+    },
+    {
+      "name": "Hemp Canvas",
+      "quantity": 8
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 8
+    },
+    {
+      "name": "Hulk, Warship",
+      "quantity": 1
+    },
+    {
+      "name": "Mast Section",
+      "quantity": 9
+    },
+    {
+      "name": "Nails",
+      "quantity": 2
+    },
+    {
+      "name": "Planks, Oak",
+      "quantity": 22
+    },
+    {
+      "name": "Rum",
+      "quantity": 8
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 5
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Careening Camp"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 48,
+      "minutes": 0
+    },
+    "gold": 0
+  }
+}

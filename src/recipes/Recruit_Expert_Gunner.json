@@ -1,0 +1,30 @@
+{
+  "product": {
+    "name": "Expert Gunner",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Cheese, Common",
+      "quantity": 4
+    },
+    {
+      "name": "Coffee",
+      "quantity": 4
+    },
+    {
+      "name": "Tobacco",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Recruitment Office"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 4,
+      "minutes": 0
+    },
+    "gold": 800
+  }
+}

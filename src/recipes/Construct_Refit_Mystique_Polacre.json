@@ -1,0 +1,19 @@
+{
+  "product": {
+    "name": "Refit: 'Mystique' Polacre",
+    "quantity": 1
+  },
+  "ingredients": [],
+  "buildings": [
+    "Advanced Shipyard (Medium)",
+    "Master Shipyard (Large)",
+    "Shipyard, Large"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 12,
+      "minutes": 0
+    },
+    "gold": 7665
+  }
+}

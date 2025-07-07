@@ -1,0 +1,23 @@
+{
+  "products": [
+    {
+      "name": "Granite",
+      "quantity": 5
+    },
+    {
+      "name": "Gravel", 
+      "quantity": 3
+    }
+  ],
+  "ingredients": [],
+  "buildings": [
+    "Advanced Quarry (Granite)"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 2,
+      "minutes": 0
+    },
+    "gold": 30
+  }
+}

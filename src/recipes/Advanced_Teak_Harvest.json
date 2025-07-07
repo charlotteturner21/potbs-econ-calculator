@@ -1,0 +1,17 @@
+{
+  "product": {
+    "name": "Logs, Teak",
+    "quantity": 10
+  },
+  "ingredients": [],
+  "buildings": [
+    "Advanced Logging Camp (Teak)"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 48
+    },
+    "gold": 400
+  }
+}

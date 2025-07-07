@@ -1,0 +1,42 @@
+{
+  "product": {
+    "name": "Medium Hull",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Frame Timber, Oak",
+      "quantity": 4
+    },
+    {
+      "name": "Keel Section",
+      "quantity": 1
+    },
+    {
+      "name": "Nails",
+      "quantity": 3
+    },
+    {
+      "name": "Planks, Oak",
+      "quantity": 42
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 3
+    },
+    {
+      "name": "Ship Stem",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 8,
+      "minutes": 0
+    },
+    "gold": 225
+  }
+}

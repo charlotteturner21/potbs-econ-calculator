@@ -1,0 +1,62 @@
+{
+  "product": {
+    "name": "'Cerberus' Mastercraft Frigate (Captured)",
+    "quantity": 3
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 12
+    },
+    {
+      "name": "Blocks, Oak",
+      "quantity": 2
+    },
+    {
+      "name": "Hemp Canvas",
+      "quantity": 2
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 2
+    },
+    {
+      "name": "Hulk, Major",
+      "quantity": 1
+    },
+    {
+      "name": "Mast Section",
+      "quantity": 5
+    },
+    {
+      "name": "Nails",
+      "quantity": 2
+    },
+    {
+      "name": "Planks, Oak",
+      "quantity": 20
+    },
+    {
+      "name": "Rum",
+      "quantity": 8
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 5
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Careening Camp"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 18,
+      "minutes": 0
+    },
+    "gold": 0
+  }
+}

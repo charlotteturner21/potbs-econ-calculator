@@ -1,0 +1,38 @@
+{
+  "product": {
+    "name": "Large Fore-and-Aft Rig",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 5
+    },
+    {
+      "name": "Mast Section",
+      "quantity": 5
+    },
+    {
+      "name": "Rigging",
+      "quantity": 5
+    },
+    {
+      "name": "Sailcloth",
+      "quantity": 4
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 7
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 8,
+      "minutes": 0
+    },
+    "gold": 300
+  }
+}

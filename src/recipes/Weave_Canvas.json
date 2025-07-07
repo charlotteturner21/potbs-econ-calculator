@@ -1,0 +1,22 @@
+{
+  "product": {
+    "name": "Hemp Canvas",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Hemp",
+      "quantity": 10
+    }
+  ],
+  "buildings": [
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 3,
+      "minutes": 0
+    },
+    "gold": 75
+  }
+}

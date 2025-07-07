@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Bulwarks, Heavy",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Logs, Oak",
+      "quantity": 12
+    },
+    {
+      "name": "Nails",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Advanced Lumber Mill",
+    "Lumber Mill"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

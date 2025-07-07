@@ -1,0 +1,50 @@
+{
+  "product": {
+    "name": "'Corsair' Mastercraft Xebec",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "'Corsair' Xebec",
+      "quantity": 1
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 4
+    },
+    {
+      "name": "Cheese, Fine",
+      "quantity": 1
+    },
+    {
+      "name": "Ingot, Gold",
+      "quantity": 1
+    },
+    {
+      "name": "Ingot, Silver",
+      "quantity": 1
+    },
+    {
+      "name": "Planks, Teak",
+      "quantity": 4
+    },
+    {
+      "name": "Ship Fittings, Brass",
+      "quantity": 4
+    },
+    {
+      "name": "Wine, Fine",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 4,
+      "minutes": 0
+    },
+    "gold": 900
+  }
+}

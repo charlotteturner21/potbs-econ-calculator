@@ -1,0 +1,35 @@
+{
+  "product": {
+    "name": "Small Perfected Cannons 5",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 5
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 1
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 5
+    },
+    {
+      "name": "Ingot, Brass",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 1000
+  }
+}

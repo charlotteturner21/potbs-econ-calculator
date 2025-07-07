@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Structural Brace, Quality",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Lignum Vitae",
+      "quantity": 2
+    },
+    {
+      "name": "Logs, Teak",
+      "quantity": 15
+    }
+  ],
+  "buildings": [
+    "Advanced Lumber Mill",
+    "Lumber Mill"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 500
+  }
+}

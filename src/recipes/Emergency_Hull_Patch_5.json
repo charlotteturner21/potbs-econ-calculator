@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Hull Patch, Quality",
+    "quantity": 10
+  },
+  "ingredients": [
+    {
+      "name": "Leather",
+      "quantity": 5
+    },
+    {
+      "name": "Logs, Common Wood",
+      "quantity": 5
+    }
+  ],
+  "buildings": [
+    "Advanced Lumber Mill",
+    "Lumber Mill"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 500
+  }
+}

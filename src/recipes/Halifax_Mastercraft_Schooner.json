@@ -1,0 +1,54 @@
+{
+  "product": {
+    "name": "'Halifax' Mastercraft Schooner",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "'Halifax' Schooner",
+      "quantity": 1
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 2
+    },
+    {
+      "name": "Cannon, Very Small",
+      "quantity": 4
+    },
+    {
+      "name": "Cheese, Fine",
+      "quantity": 1
+    },
+    {
+      "name": "Ingot, Gold",
+      "quantity": 1
+    },
+    {
+      "name": "Ingot, Silver",
+      "quantity": 1
+    },
+    {
+      "name": "Planks, Teak",
+      "quantity": 2
+    },
+    {
+      "name": "Ship Fittings, Brass",
+      "quantity": 2
+    },
+    {
+      "name": "Wine, Fine",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 300
+  }
+}

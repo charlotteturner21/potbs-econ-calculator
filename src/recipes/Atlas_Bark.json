@@ -1,0 +1,50 @@
+{
+  "product": {
+    "name": "'Atlas' Bark",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 6
+    },
+    {
+      "name": "Cannon, Medium",
+      "quantity": 10
+    },
+    {
+      "name": "Cannon, Swivel Gun",
+      "quantity": 2
+    },
+    {
+      "name": "Granite",
+      "quantity": 10
+    },
+    {
+      "name": "Medium Square Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 4
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 3
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 6
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 32,
+      "minutes": 0
+    },
+    "gold": 3600
+  }
+}

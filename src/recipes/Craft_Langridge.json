@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Crate of Langridge",
+    "quantity": 15
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 1
+    },
+    {
+      "name": "Nails",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 10
+  }
+}

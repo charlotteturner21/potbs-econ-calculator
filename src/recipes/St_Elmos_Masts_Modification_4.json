@@ -1,0 +1,31 @@
+{
+  "product": {
+    "name": "St. Elmo's Masts Modification 4",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Lignum Vitae",
+      "quantity": 32
+    },
+    {
+      "name": "Nails",
+      "quantity": 8
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 16
+    }
+  ],
+  "buildings": [
+    "Advanced Lumber Mill",
+    "Lumber Mill"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 1600
+  }
+}

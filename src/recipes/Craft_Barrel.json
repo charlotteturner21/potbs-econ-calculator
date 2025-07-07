@@ -1,0 +1,26 @@
+{
+  "product": {
+    "name": "Barrel (Oak)",
+    "quantity": 10
+  },
+  "ingredients": [
+    {
+      "name": "Ingot, Iron",
+      "quantity": 2
+    },
+    {
+      "name": "Logs, Oak",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 30
+  }
+}

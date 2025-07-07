@@ -1,0 +1,35 @@
+{
+  "product": {
+    "name": "Huge Perfected Cannons 1",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 8
+    },
+    {
+      "name": "Blocks, Oak",
+      "quantity": 4
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 8
+    },
+    {
+      "name": "Ingot, Iron",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

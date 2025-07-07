@@ -1,0 +1,50 @@
+{
+  "product": {
+    "name": "'Chaleur' Schooner",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 2
+    },
+    {
+      "name": "Cannon, Small",
+      "quantity": 6
+    },
+    {
+      "name": "Cannon, Swivel Gun",
+      "quantity": 4
+    },
+    {
+      "name": "Granite",
+      "quantity": 4
+    },
+    {
+      "name": "Medium Fore-and-Aft Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 1
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 1
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 3
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 20,
+      "minutes": 26
+    },
+    "gold": 1200
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "product": {
+    "name": "Small Long-Barreled Guns 1",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 3
+    },
+    {
+      "name": "Blocks, Oak",
+      "quantity": 1
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 1
+    },
+    {
+      "name": "Ingot, Iron",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 600
+  }
+}

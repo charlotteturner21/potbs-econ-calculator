@@ -1,0 +1,58 @@
+{
+  "product": {
+    "name": "'Santiago' Galleon",
+    "quantity": 4
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 2
+    },
+    {
+      "name": "Cannon, Medium",
+      "quantity": 2
+    },
+    {
+      "name": "Cannon, Small",
+      "quantity": 14
+    },
+    {
+      "name": "Cannon, Swivel Gun",
+      "quantity": 6
+    },
+    {
+      "name": "Granite",
+      "quantity": 10
+    },
+    {
+      "name": "Large Hull",
+      "quantity": 1
+    },
+    {
+      "name": "Large Square Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 5
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 2
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 3
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 18,
+      "minutes": 0
+    },
+    "gold": 2200
+  }
+}

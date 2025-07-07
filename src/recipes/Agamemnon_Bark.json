@@ -1,0 +1,58 @@
+{
+  "product": {
+    "name": "'Agamemnon' Bark",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 6
+    },
+    {
+      "name": "Cannon, Medium",
+      "quantity": 16
+    },
+    {
+      "name": "Cannon, Small",
+      "quantity": 14
+    },
+    {
+      "name": "Cannon, Swivel Gun",
+      "quantity": 4
+    },
+    {
+      "name": "Granite",
+      "quantity": 12
+    },
+    {
+      "name": "Medium Hull",
+      "quantity": 1
+    },
+    {
+      "name": "Medium Square Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 5
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 3
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 6
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 36,
+      "minutes": 0
+    },
+    "gold": 6000
+  }
+}

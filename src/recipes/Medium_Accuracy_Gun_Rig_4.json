@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Medium Accuracy Gun Rig 4",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Blocks, Oak",
+      "quantity": 6
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 6
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 800
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Spare Guns, Improved",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Cannon, Medium",
+      "quantity": 5
+    },
+    {
+      "name": "Cannon, Small",
+      "quantity": 5
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 400
+  }
+}

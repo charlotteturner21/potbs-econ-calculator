@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "Large Speed Gun Rig 1",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Hemp Rope",
+      "quantity": 10
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 200
+  }
+}

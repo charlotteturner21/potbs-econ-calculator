@@ -1,0 +1,42 @@
+{
+  "product": {
+    "name": "Fishing Smack",
+    "quantity": 6
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 1
+    },
+    {
+      "name": "Granite",
+      "quantity": 1
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 1
+    },
+    {
+      "name": "Tiny Fore-and-Aft Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Tiny Hull",
+      "quantity": 1
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 400
+  }
+}

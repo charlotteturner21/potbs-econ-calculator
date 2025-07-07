@@ -1,0 +1,30 @@
+{
+  "product": {
+    "name": "Expert Carpenter",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Cheese, Common",
+      "quantity": 3
+    },
+    {
+      "name": "Coffee",
+      "quantity": 3
+    },
+    {
+      "name": "Tobacco",
+      "quantity": 3
+    }
+  ],
+  "buildings": [
+    "Recruitment Office"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 3,
+      "minutes": 0
+    },
+    "gold": 600
+  }
+}

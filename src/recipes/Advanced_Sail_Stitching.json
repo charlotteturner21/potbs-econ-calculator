@@ -1,0 +1,22 @@
+{
+  "product": {
+    "name": "Sailcloth",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Hemp Canvas",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 45
+    },
+    "gold": 100
+  }
+}

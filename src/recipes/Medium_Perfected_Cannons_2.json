@@ -1,0 +1,35 @@
+{
+  "product": {
+    "name": "Medium Perfected Cannons 2",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Hemp Rope",
+      "quantity": 4
+    },
+    {
+      "name": "Ingot, Iron",
+      "quantity": 2
+    },
+    {
+      "name": "Black Powder",
+      "quantity": 4
+    },
+    {
+      "name": "Oak Blocks",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 400
+  }
+}

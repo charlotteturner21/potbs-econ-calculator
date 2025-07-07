@@ -1,0 +1,22 @@
+{
+  "product": {
+    "name": "Blocks, Lignum Vitae",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Lignum Vitae",
+      "quantity": 5
+    }
+  ],
+  "buildings": [
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 45
+    },
+    "gold": 250
+  }
+}

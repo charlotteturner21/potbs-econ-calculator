@@ -1,0 +1,46 @@
+{
+  "product": {
+    "name": "'Currituck' Periauger",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 1
+    },
+    {
+      "name": "Cannon, Swivel Gun",
+      "quantity": 2
+    },
+    {
+      "name": "Granite",
+      "quantity": 2
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 1
+    },
+    {
+      "name": "Tiny Fore-and-Aft Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Tiny Hull",
+      "quantity": 1
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 6,
+      "minutes": 0
+    },
+    "gold": 500
+  }
+}

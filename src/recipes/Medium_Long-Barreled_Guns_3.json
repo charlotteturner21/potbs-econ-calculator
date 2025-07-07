@@ -1,0 +1,35 @@
+{
+  "product": {
+    "name": "Medium Long-Barreled Guns 3",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Hemp Rope",
+      "quantity": 4
+    },
+    {
+      "name": "Ingot, Brass",
+      "quantity": 4
+    },
+    {
+      "name": "Black Powder",
+      "quantity": 10
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 1000
+  }
+}

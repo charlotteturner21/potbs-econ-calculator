@@ -1,0 +1,62 @@
+{
+  "product": {
+    "name": "'Cerberus' Courier Frigate (Captured)",
+    "quantity": 3
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 4
+    },
+    {
+      "name": "Blocks, Oak",
+      "quantity": 4
+    },
+    {
+      "name": "Hemp Canvas",
+      "quantity": 8
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 6
+    },
+    {
+      "name": "Hulk, Minor",
+      "quantity": 1
+    },
+    {
+      "name": "Mast Section",
+      "quantity": 8
+    },
+    {
+      "name": "Nails",
+      "quantity": 2
+    },
+    {
+      "name": "Planks, Oak",
+      "quantity": 16
+    },
+    {
+      "name": "Rum",
+      "quantity": 6
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 2
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Careening Camp"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 12,
+      "minutes": 0
+    },
+    "gold": 0
+  }
+}

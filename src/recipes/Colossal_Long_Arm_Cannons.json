@@ -1,0 +1,39 @@
+{
+  "product": {
+    "name": "Colossal Long Arm Cannon",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 8
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 16
+    },
+    {
+      "name": "Ingot, Gold",
+      "quantity": 1
+    },
+    {
+      "name": "Ingot, Silver",
+      "quantity": 1
+    },
+    {
+      "name": "Logs, Oak",
+      "quantity": 8
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 2200
+  }
+}

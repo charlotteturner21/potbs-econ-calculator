@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "Colossal Accuracy Gun Rig 1",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Oak Blocks",
+      "quantity": 20
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "product": {
+    "name": "'Cerberus' Heavy Frigate",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "'Cerberus' Frigate",
+      "quantity": 1
+    },
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 3
+    },
+    {
+      "name": "Planks, Teak",
+      "quantity": 16
+    },
+    {
+      "name": "Ship Fittings, Brass",
+      "quantity": 3
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 3,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

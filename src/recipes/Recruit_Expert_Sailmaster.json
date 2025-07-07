@@ -1,0 +1,30 @@
+{
+  "product": {
+    "name": "Expert Sailmaster",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Cheese, Common",
+      "quantity": 1
+    },
+    {
+      "name": "Tobacco",
+      "quantity": 1
+    },
+    {
+      "name": "Wine, Common",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Recruitment Office"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 200
+  }
+}

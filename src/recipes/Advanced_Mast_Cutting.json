@@ -1,0 +1,22 @@
+{
+  "product": {
+    "name": "Mast Section",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Logs, Fir",
+      "quantity": 10
+    }
+  ],
+  "buildings": [
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 2,
+      "minutes": 0
+    },
+    "gold": 50
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "product": {
+    "name": "Frame Timber, Oak",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Logs, Oak",
+      "quantity": 20
+    }
+  ],
+  "buildings": [
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 30
+    },
+    "gold": 150
+  }
+}

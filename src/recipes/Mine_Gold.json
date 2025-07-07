@@ -1,0 +1,14 @@
+{
+  "product": null,
+  "ingredients": [],
+  "buildings": [
+    "Advanced Mine (Gold)"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 4,
+      "minutes": 0
+    },
+    "gold": 1800
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "Ship Fittings, Iron",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Ingot, Iron",
+      "quantity": 10
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 27
+  }
+}

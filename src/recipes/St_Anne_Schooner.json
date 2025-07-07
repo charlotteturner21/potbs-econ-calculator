@@ -1,0 +1,50 @@
+{
+  "product": {
+    "name": "'St. Anne' Schooner",
+    "quantity": 6
+  },
+  "ingredients": [
+    {
+      "name": "Anchor",
+      "quantity": 1
+    },
+    {
+      "name": "Cannon, Small",
+      "quantity": 6
+    },
+    {
+      "name": "Cannon, Swivel Gun",
+      "quantity": 6
+    },
+    {
+      "name": "Granite",
+      "quantity": 1
+    },
+    {
+      "name": "Small Fore-and-Aft Rig",
+      "quantity": 1
+    },
+    {
+      "name": "Small Hull",
+      "quantity": 1
+    },
+    {
+      "name": "Sulfur",
+      "quantity": 1
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

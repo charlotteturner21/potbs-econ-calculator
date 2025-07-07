@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "Medium Wadding 1",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Hemp Canvas",
+      "quantity": 3
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "gold": 200
+  }
+}

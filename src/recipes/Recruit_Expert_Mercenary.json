@@ -1,0 +1,30 @@
+{
+  "product": {
+    "name": "Expert Mercenary",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Cheese, Common",
+      "quantity": 1
+    },
+    {
+      "name": "Rum",
+      "quantity": 2
+    },
+    {
+      "name": "Tobacco",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Recruitment Office"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 2,
+      "minutes": 0
+    },
+    "gold": 400
+  }
+}

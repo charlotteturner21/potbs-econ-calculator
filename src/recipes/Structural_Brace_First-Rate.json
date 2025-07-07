@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "First-Rate",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Lignum Vitae",
+      "quantity": 24
+    },
+    {
+      "name": "Logs, Teak",
+      "quantity": 45
+    }
+  ],
+  "buildings": [
+    "Advanced Lumber Mill",
+    "Lumber Mill"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 18,
+      "minutes": 0
+    },
+    "gold": 5000
+  }
+}

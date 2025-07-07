@@ -1,0 +1,38 @@
+{
+  "product": {
+    "name": "'Desperation' Raft",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Barrel",
+      "quantity": 4
+    },
+    {
+      "name": "Hemp Canvas",
+      "quantity": 1
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 1
+    },
+    {
+      "name": "Mast Section",
+      "quantity": 1
+    },
+    {
+      "name": "Wood Tar",
+      "quantity": 1
+    }
+  ],
+  "buildings": [
+    "Shipyard, Medium"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 6,
+      "minutes": 0
+    },
+    "gold": 250
+  }
+}

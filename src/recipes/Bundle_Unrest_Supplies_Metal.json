@@ -1,0 +1,40 @@
+{
+  "product": {
+    "name": "Unrest Supplies: Metal",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Hemp Rope",
+      "quantity": 5
+    },
+    {
+      "name": "Nails",
+      "quantity": 2
+    },
+    {
+      "name": "Ore, Copper",
+      "quantity": 4
+    },
+    {
+      "name": "Ore, Iron",
+      "quantity": 8
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard",
+    "Forge"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 2,
+      "minutes": 0
+    },
+    "gold": 1000
+  }
+}

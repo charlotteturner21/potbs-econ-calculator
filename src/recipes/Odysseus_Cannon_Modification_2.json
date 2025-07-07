@@ -1,0 +1,31 @@
+{
+  "product": {
+    "name": "Odysseus' Cannon Modification 2",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Blocks, Lignum Vitae",
+      "quantity": 4
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 8
+    },
+    {
+      "name": "Logs, Oak",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 800
+  }
+}

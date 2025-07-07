@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Gorgon's Cannon Modification 3",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 12
+    },
+    {
+      "name": "Ingot, Brass",
+      "quantity": 12
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 1200
+  }
+}

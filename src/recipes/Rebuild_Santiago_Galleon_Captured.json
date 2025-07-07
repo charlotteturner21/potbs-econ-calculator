@@ -1,0 +1,62 @@
+{
+  "product": {
+    "name": "'Santiago' Galleon (Captured)",
+    "quantity": 3
+  },
+  "ingredients": [
+    {
+      "name": "Black Powder",
+      "quantity": 6
+    },
+    {
+      "name": "Blocks, Oak",
+      "quantity": 4
+    },
+    {
+      "name": "Hemp Canvas",
+      "quantity": 8
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 2
+    },
+    {
+      "name": "Hulk, Major",
+      "quantity": 1
+    },
+    {
+      "name": "Mast Section",
+      "quantity": 3
+    },
+    {
+      "name": "Nails",
+      "quantity": 2
+    },
+    {
+      "name": "Planks, Oak",
+      "quantity": 24
+    },
+    {
+      "name": "Rum",
+      "quantity": 9
+    },
+    {
+      "name": "Ship Fittings, Iron",
+      "quantity": 2
+    },
+    {
+      "name": "Ship Provisioning",
+      "quantity": 2
+    }
+  ],
+  "buildings": [
+    "Careening Camp"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 18,
+      "minutes": 0
+    },
+    "gold": 0
+  }
+}

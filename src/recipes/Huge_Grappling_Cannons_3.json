@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Huge Grappling Cannons 3",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Hemp Rope",
+      "quantity": 16
+    },
+    {
+      "name": "Ingot, Iron",
+      "quantity": 4
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 800
+  }
+}

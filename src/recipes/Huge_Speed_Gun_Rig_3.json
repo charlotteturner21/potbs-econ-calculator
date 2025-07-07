@@ -1,0 +1,27 @@
+{
+  "product": {
+    "name": "Huge Speed Gun Rig 3",
+    "quantity": 5
+  },
+  "ingredients": [
+    {
+      "name": "Blocks, Oak",
+      "quantity": 20
+    },
+    {
+      "name": "Hemp Rope",
+      "quantity": 20
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "gold": 800
+  }
+}

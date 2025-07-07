@@ -1,0 +1,31 @@
+{
+  "product": {
+    "name": "Cannon, Huge",
+    "quantity": 1
+  },
+  "ingredients": [
+    {
+      "name": "Ingot, Brass",
+      "quantity": 8
+    },
+    {
+      "name": "Ingot, Iron",
+      "quantity": 6
+    },
+    {
+      "name": "Logs, Teak",
+      "quantity": 6
+    }
+  ],
+  "buildings": [
+    "Advanced Forge",
+    "Assembly Yard"
+  ],
+  "cost": {
+    "labour": {
+      "hours": 0,
+      "minutes": 45
+    },
+    "gold": 480
+  }
+}
