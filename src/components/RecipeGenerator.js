@@ -233,6 +233,7 @@ function RecipeGenerator() {
                                                         label={`Product ${index + 1} Name`}
                                                         variant="outlined"
                                                         required
+                                                        error={!product.name.trim()}
                                                     />
                                                 )}
                                             />

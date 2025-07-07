@@ -319,6 +319,34 @@ function RecipeSelector() {
 
     const selectedRecipeData = selectedRecipe ? recipes[selectedRecipe] : null;
 
+    // Calculate total production cost
+    const getTotalProductionCost = useMemo(() => {
+        if (!getExecutionOrder || getExecutionOrder.length === 0) {
+            // For base recipes (no dependencies), just return the selected recipe's cost
+            if (selectedRecipeData) {
+                return {
+                    totalGold: selectedRecipeData.cost.gold,
+                    totalTimeHours: selectedRecipeData.cost.labour.hours,
+                    totalTimeMinutes: selectedRecipeData.cost.labour.minutes,
+                    stepCount: 1
+                };
+            }
+            return { totalGold: 0, totalTimeHours: 0, totalTimeMinutes: 0, stepCount: 0 };
+        }
+
+        const totalGold = getExecutionOrder.reduce((sum, step) => sum + step.totalCost.gold, 0);
+        const totalMinutes = getExecutionOrder.reduce((sum, step) => {
+            return sum + (step.totalCost.labour.hours * 60) + step.totalCost.labour.minutes;
+        }, 0);
+        
+        return {
+            totalGold,
+            totalTimeHours: Math.floor(totalMinutes / 60),
+            totalTimeMinutes: totalMinutes % 60,
+            stepCount: getExecutionOrder.length
+        };
+    }, [getExecutionOrder, selectedRecipeData]);
+
     const TabPanel = ({ children, value, index }) => (
         <div hidden={value !== index}>
             {value === index && children}
@@ -356,7 +384,8 @@ function RecipeSelector() {
                             const recipeData = recipes[option];
                             if (!recipeData) return option;
                             const products = getRecipeProducts(recipeData);
-                            return products.length > 0 ? products.map(p => p.name).join(' + ') : option;
+                            const label = products.length > 0 ? products.map(p => p.name).join(' + ') : option;
+                            return label.length > 50 ? label.substring(0, 50) + '...' : label;
                         }}
                         renderInput={(params) => (
                             <TextField
@@ -410,20 +439,35 @@ function RecipeSelector() {
 
             {/* Results */}
             {selectedRecipeData ? (
-                <Grid container spacing={3} sx={{ flexWrap: { sm: 'nowrap' } }}>
+                <Box sx={{ display: 'flex', gap: 3, flexDirection: { xs: 'column', sm: 'row' } }}>
                     {/* Recipe Details - Left Side */}
-                    <Grid item xs={12} sm={5} md={4} lg={4} sx={{ minWidth: 0 }}>
+                    <Box sx={{ 
+                        width: { xs: '100%', sm: '400px' }, 
+                        flexShrink: 0,
+                        minWidth: 0,
+                        overflow: 'hidden'
+                    }}>
                         <Stack spacing={2}>
                             {/* Recipe Overview */}
                             <Card>
-                                <CardContent>
-                                    <Typography variant="h5" gutterBottom>
+                                <CardContent sx={{ textAlign: 'left' }}>
+                                    <Typography 
+                                        variant="h5" 
+                                        gutterBottom
+                                        sx={{
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            whiteSpace: 'nowrap',
+                                            maxWidth: '100%'
+                                        }}
+                                        title={getRecipeProducts(selectedRecipeData).map(p => p.name).join(' + ') || 'Unknown Product'}
+                                    >
                                         {getRecipeProducts(selectedRecipeData).map(p => p.name).join(' + ') || 'Unknown Product'}
                                     </Typography>
                                     
-                                    <Stack spacing={1} sx={{ mb: 2 }}>
+                                    <Stack spacing={1} sx={{ mb: 2, alignItems: 'flex-start' }}>
                                         {/* Time and Cost - First Row */}
-                                        <Stack direction="row" spacing={1} flexWrap="wrap">
+                                        <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ justifyContent: 'flex-start' }}>
                                             <Chip 
                                                 icon={<ScheduleIcon />}
                                                 label={`${selectedRecipeData.cost.labour.hours > 0 ? `${selectedRecipeData.cost.labour.hours}h ` : ''}${selectedRecipeData.cost.labour.minutes}m`} 
@@ -439,19 +483,22 @@ function RecipeSelector() {
                                         </Stack>
                                         
                                         {/* Products - Second Row (gets its own space) */}
-                                        <Stack direction="row" spacing={1}>
+                                        <Stack direction="row" spacing={1} sx={{ justifyContent: 'flex-start' }}>
                                             <Chip 
                                                 label={`Produces: ${getRecipeProducts(selectedRecipeData).map(p => `${p.quantity}x ${p.name}`).join(', ')}`} 
                                                 color="success" 
                                                 variant="outlined"
                                                 sx={{ 
                                                     maxWidth: '100%',
+                                                    width: 'fit-content',
                                                     '& .MuiChip-label': {
                                                         overflow: 'hidden',
                                                         textOverflow: 'ellipsis',
-                                                        maxWidth: '250px'
+                                                        maxWidth: '200px',
+                                                        whiteSpace: 'nowrap'
                                                     }
                                                 }}
+                                                title={`Produces: ${getRecipeProducts(selectedRecipeData).map(p => `${p.quantity}x ${p.name}`).join(', ')}`}
                                             />
                                         </Stack>
                                     </Stack>
@@ -463,7 +510,17 @@ function RecipeSelector() {
                                     </Typography>
                                     <Box sx={{ pl: 3, mb: 2 }}>
                                         {selectedRecipeData.buildings.map((building, index) => (
-                                            <Typography key={index} variant="body2" color="text.secondary">
+                                            <Typography 
+                                                key={index} 
+                                                variant="body2" 
+                                                color="text.secondary"
+                                                sx={{
+                                                    overflow: 'hidden',
+                                                    textOverflow: 'ellipsis',
+                                                    whiteSpace: 'nowrap'
+                                                }}
+                                                title={building}
+                                            >
                                                 • {building}
                                             </Typography>
                                         ))}
@@ -477,7 +534,17 @@ function RecipeSelector() {
                                     <Box sx={{ pl: 3 }}>
                                         {selectedRecipeData.ingredients.length > 0 ? (
                                             selectedRecipeData.ingredients.map((ingredient, index) => (
-                                                <Typography key={index} variant="body2" color="text.secondary">
+                                                <Typography 
+                                                    key={index} 
+                                                    variant="body2" 
+                                                    color="text.secondary"
+                                                    sx={{
+                                                        overflow: 'hidden',
+                                                        textOverflow: 'ellipsis',
+                                                        whiteSpace: 'nowrap'
+                                                    }}
+                                                    title={`${ingredient.quantity}x ${ingredient.name}`}
+                                                >
                                                     • {ingredient.quantity}x {ingredient.name}
                                                 </Typography>
                                             ))
@@ -493,12 +560,18 @@ function RecipeSelector() {
                             {/* Quick Stats */}
                             {(Object.keys(getTotalMaterials.withRecipes).length > 0 || Object.keys(getTotalMaterials.withoutRecipes).length > 0) && (
                                 <Card>
-                                    <CardContent>
+                                    <CardContent sx={{ textAlign: 'left' }}>
                                         <Typography variant="h6" gutterBottom>
                                             Material Summary
                                         </Typography>
                                         
-                                        <Stack spacing={1}>
+                                        <Stack spacing={1} sx={{ alignItems: 'flex-start' }}>
+                                            <Typography variant="body2" color="error.main" fontWeight="medium" sx={{ fontSize: '0.95rem' }}>
+                                                💰 Total Production Cost: {getTotalProductionCost.totalGold} gold
+                                            </Typography>
+                                            <Typography variant="body2" color="info.main" fontWeight="medium">
+                                                ⏱ Total Time: {getTotalProductionCost.totalTimeHours > 0 ? `${getTotalProductionCost.totalTimeHours}h ` : ''}{getTotalProductionCost.totalTimeMinutes}m
+                                            </Typography>
                                             <Typography variant="body2" color="success.main" fontWeight="medium">
                                                 ✓ Can craft: {Object.keys(getTotalMaterials.withRecipes).length} items
                                             </Typography>
@@ -512,11 +585,42 @@ function RecipeSelector() {
                                     </CardContent>
                                 </Card>
                             )}
+
+                            {/* Missing Data Summary */}
+                            {Object.keys(getTotalMaterials.withoutRecipes).length > 0 && (
+                                <Card sx={{ borderLeft: 3, borderColor: 'warning.main' }}>
+                                    <CardContent sx={{ textAlign: 'left' }}>
+                                        <Typography variant="h6" gutterBottom color="warning.main">
+                                            ⚠ Missing Recipe Data
+                                        </Typography>
+                                        
+                                        <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                                            The following ingredients don't have recipes and may indicate missing data:
+                                        </Typography>
+                                        
+                                        <Stack spacing={1} sx={{ alignItems: 'flex-start' }}>
+                                            {Object.entries(getTotalMaterials.withoutRecipes).map(([material, quantity]) => (
+                                                <Typography key={material} variant="body2" color="warning.main" fontWeight="medium">
+                                                    • {quantity}x {material}
+                                                </Typography>
+                                            ))}
+                                        </Stack>
+                                        
+                                        <Typography variant="caption" color="text.secondary" sx={{ mt: 2, display: 'block' }}>
+                                            These items likely need recipe data to be complete.
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            )}
                         </Stack>
-                    </Grid>
+                    </Box>
 
                     {/* Detailed Analysis - Right Side */}
-                    <Grid item xs={12} sm={7} md={8} lg={8} sx={{ minWidth: 0 }}>
+                    <Box sx={{ 
+                        flex: 1,
+                        minWidth: 0,
+                        overflow: 'hidden'
+                    }}>
                         <Card>
                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                                 <Tabs value={tabValue} onChange={handleTabChange}>
@@ -529,10 +633,50 @@ function RecipeSelector() {
                             {/* Production Chain Tab */}
                             <TabPanel value={tabValue} index={0}>
                                 <CardContent>
-                                    <Typography variant="h6" gutterBottom>
-                                        Execution Order
-                                    </Typography>
-                                    {getExecutionOrder.length > 0 ? (
+                                    <Stack spacing={2}>
+                                        {/* Production Summary */}
+                                        <Box sx={{ 
+                                            p: 2, 
+                                            bgcolor: 'background.default', 
+                                            borderRadius: 1,
+                                            border: 1,
+                                            borderColor: 'divider'
+                                        }}>
+                                            <Typography variant="h6" gutterBottom color="primary.main">
+                                                Production Summary
+                                            </Typography>
+                                            <Grid container spacing={2}>
+                                                <Grid item xs={6} sm={3}>
+                                                    <Typography variant="body2" color="text.secondary">Total Cost</Typography>
+                                                    <Typography variant="h6" color="error.main" fontWeight="bold">
+                                                        {getTotalProductionCost.totalGold} gold
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item xs={6} sm={3}>
+                                                    <Typography variant="body2" color="text.secondary">Total Time</Typography>
+                                                    <Typography variant="h6" color="info.main" fontWeight="bold">
+                                                        {getTotalProductionCost.totalTimeHours > 0 ? `${getTotalProductionCost.totalTimeHours}h ` : ''}{getTotalProductionCost.totalTimeMinutes}m
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item xs={6} sm={3}>
+                                                    <Typography variant="body2" color="text.secondary">Total Steps</Typography>
+                                                    <Typography variant="h6" color="primary.main" fontWeight="bold">
+                                                        {getTotalProductionCost.stepCount}
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item xs={6} sm={3}>
+                                                    <Typography variant="body2" color="text.secondary">Buildings</Typography>
+                                                    <Typography variant="h6" color="secondary.main" fontWeight="bold">
+                                                        {Object.keys(getBuildingGroups).length}
+                                                    </Typography>
+                                                </Grid>
+                                            </Grid>
+                                        </Box>
+
+                                        <Typography variant="h6" gutterBottom>
+                                            Execution Order
+                                        </Typography>
+                                        {getExecutionOrder.length > 0 ? (
                                         <TableContainer>
                                             <Table size="small">
                                                 <TableHead>
@@ -576,11 +720,12 @@ function RecipeSelector() {
                                                 </TableBody>
                                             </Table>
                                         </TableContainer>
-                                    ) : (
-                                        <Typography variant="body2" color="text.secondary" fontStyle="italic">
-                                            This is a base recipe with no dependencies.
-                                        </Typography>
-                                    )}
+                                        ) : (
+                                            <Typography variant="body2" color="text.secondary" fontStyle="italic">
+                                                This is a base recipe with no dependencies.
+                                            </Typography>
+                                        )}
+                                    </Stack>
                                 </CardContent>
                             </TabPanel>
 
@@ -664,8 +809,8 @@ function RecipeSelector() {
                                 </CardContent>
                             </TabPanel>
                         </Card>
-                    </Grid>
-                </Grid>
+                    </Box>
+                </Box>
             ) : (
                 <Card>
                     <CardContent sx={{ textAlign: 'center', py: 6 }}>

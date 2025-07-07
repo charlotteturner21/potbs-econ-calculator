@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import {
-  AppBar,
-  Toolbar,
   Typography,
   Tabs,
   Tab,
@@ -12,7 +10,8 @@ import {
 } from "@mui/material";
 import {
   Restaurant as RecipeIcon,
-  Add as AddIcon
+  Add as AddIcon,
+  GitHub as GitHubIcon
 } from "@mui/icons-material";
 import RecipeSelector from "./components/RecipeSelector";
 import RecipeGenerator from "./components/RecipeGenerator";
@@ -53,15 +52,7 @@ function App() {
 
   return (
     <div className="App">
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Pirates of the Burning Sea - Economy Calculator
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      
-      <Container maxWidth="xl" sx={{ mt: 2 }}>
+      <Container maxWidth="xl" sx={{ mt: 3 }}>
         <Paper elevation={2}>
           <Tabs value={tabValue} onChange={handleTabChange} aria-label="recipe tabs">
             <Tab 
@@ -87,6 +78,35 @@ function App() {
           <RecipeGenerator />
         </TabPanel>
       </Container>
+      
+      {/* Footer */}
+      <Box 
+        component="footer" 
+        sx={{ 
+          mt: 4, 
+          py: 2, 
+          textAlign: 'center',
+          borderTop: 1,
+          borderColor: 'divider',
+          backgroundColor: 'background.paper'
+        }}
+      >
+        <Typography variant="body2" color="text.secondary">
+          <GitHubIcon sx={{ verticalAlign: 'middle', mr: 1 }} />
+          View source code on{' '}
+          <a 
+            href="https://github.com/charlotteturner21/potbs-econ-calculator" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ 
+              color: 'inherit', 
+              textDecoration: 'none' 
+            }}
+          >
+            GitHub
+          </a>
+        </Typography>
+      </Box>
     </div>
   );
 }
